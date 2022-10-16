@@ -37,3 +37,10 @@ grpcurl -plaintext -proto ./echo.proto 127.0.0.1:50051 list
 grpcurl -plaintext -proto ./echo.proto 127.0.0.1:50051 EchoService.Echo
 grpcurl -d '{"input": "bar"}' -plaintext -proto ./echo.proto 127.0.0.1:50051 EchoService.Echo
 ```
+
+Check with [grpcui](https://github.com/fullstorydev/grpcui)
+```
+cd echo
+grpcui -plaintext -proto echo.proto 127.0.0.1:50051
+```
+
