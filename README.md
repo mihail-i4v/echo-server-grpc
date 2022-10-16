@@ -30,9 +30,9 @@ protoc --go_out=. --go_opt=paths=source_relative \
     echo/echo.proto
 ```
 
-Query with grpcurl
+Query with [grpcurl](https://github.com/fullstorydev/grpcurl)
 ```
-cd go-grpc-echo/echo
+cd echo
 grpcurl -plaintext -proto ./echo.proto 127.0.0.1:50051 list
 grpcurl -plaintext -proto ./echo.proto 127.0.0.1:50051 EchoService.Echo
 grpcurl -d '{"input": "bar"}' -plaintext -proto ./echo.proto 127.0.0.1:50051 EchoService.Echo
